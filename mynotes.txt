@@ -1,0 +1,1 @@
+git push --set-upstream git@github.com:darrenwlsn/propertypulse.git main
