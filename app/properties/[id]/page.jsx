@@ -5,6 +5,7 @@ import { useParams } from 'next/navigation'
 import { fetchProperty } from '@/utils/requests'
 import PropertyHeaderImage from '@/components/PropertyHeaderImage'
 import PropertyDetails from '@/components/PropertyDetails'
+import PropertyImages from '@/components/PropertyImages'
 import Spinner from '@/components/Spinner'
 import { FaArrowLeft } from 'react-icons/fa'
 
@@ -47,7 +48,7 @@ const PropertyPage = () => {
     {loading && <Spinner loading={loading}/>}
     {!loading && property && (
       <>
-        <PropertyHeaderImage image={ property.images[0]}/>
+        <PropertyHeaderImage image={property.images[0]} />
         <section>
           <div className="container m-auto py-6 px-6">
             <Link
@@ -150,6 +151,7 @@ const PropertyPage = () => {
             </div>
           </div>
     </section>
+    <PropertyImages images={property.images} />
 
       </>
 
